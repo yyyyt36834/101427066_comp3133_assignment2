@@ -1,0 +1,16 @@
+<h2>Register</h2>
+
+<a routerLink="/login" routerLinkActive="active">Login</a>
+
+<form (ngSubmit)="register()" #registerForm="ngForm">
+  <div>
+    <input type="text" [(ngModel)]="user.name" name="name" required  placeholder="name"/>
+  </div>
+  <div>
+    <input type="email" [(ngModel)]="user.email" name="email" required  placeholder="email"/>
+  </div>
+  <div>
+    <input type="password" [(ngModel)]="user.password" name="password" required  placeholder="Password"/>
+  </div>
+  <button type="submit" [disabled]="!registerForm.form.valid">Register</button>
+</form>

@@ -1,0 +1,119 @@
+<h2>Edit Employee</h2>
+  
+
+<div class="container">
+  
+    <!-- Display loading message if the form is not yet populated -->
+    <div *ngIf="!employeeForm" class="loading">
+      <p>Loading employee data...</p>
+    </div>
+  
+    <!-- Edit Form -->
+    <form *ngIf="employeeForm" [formGroup]="employeeForm" (ngSubmit)="updateEmployee()">
+      
+      <!-- First Name -->
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input
+          type="text"
+          id="first_name"
+          formControlName="first_name"
+          class="form-control"
+          required
+        />
+      </div>
+  
+      <!-- Last Name -->
+      <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input
+          type="text"
+          id="last_name"
+          formControlName="last_name"
+          class="form-control"
+          required
+        />
+      </div>
+  
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          class="form-control"
+          required
+        />
+      </div>
+  
+      <!-- Gender -->
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" formControlName="gender" class="form-control">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+  
+      <!-- Designation -->
+      <div class="form-group">
+        <label for="designation">Designation</label>
+        <input
+          type="text"
+          id="designation"
+          formControlName="designation"
+          class="form-control"
+          required
+        />
+      </div>
+  
+      <!-- Salary -->
+      <div class="form-group">
+        <label for="salary">Salary</label>
+        <input
+          type="number"
+          id="salary"
+          formControlName="salary"
+          class="form-control"
+          required
+        />
+      </div>
+  
+      
+  
+      <!-- Date of Joining -->
+      <div class="form-group">
+        <label for="date_of_joining">Date of Joining</label>
+        <input
+          type="date"
+          id="date_of_joining"
+          formControlName="date_of_joining"
+          class="form-control"
+          required
+        />
+      </div>
+        
+      <!-- Department -->
+      <div class="form-group">
+        <label for="department">Department</label>
+        <input
+          type="text"
+          id="department"
+          formControlName="department"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <!-- Update Button -->
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">
+          Update Employee
+        </button>
+      </div>
+  
+    </form>
+  </div>
+  

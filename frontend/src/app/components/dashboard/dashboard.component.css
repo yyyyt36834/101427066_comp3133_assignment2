@@ -1,0 +1,97 @@
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the dashboard container */
+  .dashboard {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling for the Create Employee Button */
+  button.create-employee {
+    margin-bottom: 20px;
+    font-size: 18px;
+    background-color: #007bff;
+  }
+  
+  button.create-employee:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling for the employee list table */
+  .employee-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .employee-list th,
+  .employee-list td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .employee-list th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .employee-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .employee-list tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Styling for Action Buttons in the table */
+  .employee-list button {
+    background-color: #007bff;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .employee-list button:hover {
+    background-color: #0056b3;
+  }
+  

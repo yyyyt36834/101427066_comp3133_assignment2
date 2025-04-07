@@ -37,9 +37,7 @@ const employeeSchema = new mongoose.Schema({
     type: String, 
     required: true 
   },
-  employee_photo: { 
-    type: String, 
-  },
+
   created_at: { 
     type: Date, 
     default: Date.now  
@@ -51,7 +49,8 @@ const employeeSchema = new mongoose.Schema({
 });
 
 employeeSchema.pre('save', function(next) {
-  this.updated_at = Date.now();  
+  this.updated_at = Date.now(); 
+  next(); 
 });
 
 const Employee = mongoose.model('Employee', employeeSchema);

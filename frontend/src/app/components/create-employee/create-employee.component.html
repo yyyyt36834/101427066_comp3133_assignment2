@@ -1,0 +1,109 @@
+<h3>Create Employee</h3>
+
+<form *ngIf="employeeForm" [formGroup]="employeeForm" (ngSubmit)="createEmployee()">
+      
+  <!-- First Name -->
+  <div class="form-group">
+    <label for="first_name">First Name</label>
+    <input
+      type="text"
+      id="first_name"
+      formControlName="first_name"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <!-- Last Name -->
+  <div class="form-group">
+    <label for="last_name">Last Name</label>
+    <input
+      type="text"
+      id="last_name"
+      formControlName="last_name"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      formControlName="email"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <!-- Gender -->
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <select id="gender" formControlName="gender" class="form-control">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <!-- Designation -->
+  <div class="form-group">
+    <label for="designation">Designation</label>
+    <input
+      type="text"
+      id="designation"
+      formControlName="designation"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <!-- Salary -->
+  <div class="form-group">
+    <label for="salary">Salary</label>
+    <input
+      type="number"
+      id="salary"
+      formControlName="salary"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <!-- Date of Joining -->
+  <div class="form-group">
+    <label for="date_of_joining">Date of Joining</label>
+    <input
+      type="date"
+      id="date_of_joining"
+      formControlName="date_of_joining"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <!-- Department -->
+  <div class="form-group">
+    <label for="department">Department</label>
+    <input
+      type="text"
+      id="department"
+      formControlName="department"
+      class="form-control"
+      required
+    />
+  </div>
+
+  
+
+  <!-- Create Button -->
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid">
+      Create Employee
+    </button>
+  </div>
+
+</form>
+

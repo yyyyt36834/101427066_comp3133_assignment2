@@ -102,7 +102,16 @@ const resolvers = {
         },
         { new: true }
       );
+      console.log("Updated employee:", updatedEmployee);
       return updatedEmployee;
+    },
+   
+    deleteEmployee: async (_, { id }) => {
+      const deletedEmployee = await Employee.findByIdAndDelete(id);
+      if (!deletedEmployee) {
+        throw new Error('Employee not found');
+      }
+      return { id: deletedEmployee.id };  
     },
   },
 };

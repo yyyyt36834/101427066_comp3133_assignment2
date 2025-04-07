@@ -1,0 +1,9 @@
+<div *ngIf="employee" class="employee-details">
+    <h2>{{ employee.first_name }} {{ employee.last_name }}</h2>
+    <p>Email: {{ employee.email }}</p>
+    <p>Designation: {{ employee.designation }}</p>
+    <p>Department: {{ employee.department }}</p>
+    <p>Salary: {{ employee.salary }}</p>
+    <p>Date of Joining: {{ employee.date_of_joining | date }}</p>
+  </div>
+  

@@ -20,7 +20,6 @@ const typeDefs = gql`
     salary: Float!
     date_of_joining: String!
     department: String!
-    employee_photo: String
     created_at: String!
     updated_at: String!
   }
@@ -61,6 +60,8 @@ const typeDefs = gql`
         salary: Float, 
         date_of_joining: String, 
         department: String): Employee
+
+    deleteEmployee(id: ID!): Employee
   }
 `;
 
